@@ -1,0 +1,288 @@
+.inner-hero{
+	height: 600px;
+	height: 40vh;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	background:{
+		repeat: no-repeat;
+		size: cover;
+		position: center center;
+	}
+	#s395853 &{
+		background-image: url("/carlhester-com/_img/images/story-top.jpg");
+	}
+	#s395855 &{
+		background-image: url("/carlhester-com/_img/images/teamTopImg.jpg");
+	}
+	.previewFrame &{
+		height: 600px;
+	}
+	@include respond-to(480){
+		height: 45vh;
+	}
+	@include respond-to(700){
+		height: 55vh;
+	}
+	@include respond-to(920){
+		height: 65vh;
+	}
+	&__text{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		padding: 1em 2em 1.5em;
+		background-color: rgba($base-color, 0.8);
+		width: 90%;
+		text-align: center;
+		font-size: 10px;
+
+		#s395853 &{
+					
+		}
+		@include respond-to(480){
+			font-size: 14px;
+		}
+		@include respond-to(640){
+			width: 75%;
+		}
+		@include respond-to(800){
+			bottom: 25%;
+			top: auto;
+			left: 6em;
+			transform: none;
+			background-color: rgba($base-color, 0.9);
+			width: auto;
+			#s395853 &{
+				right: 6em;
+				left: auto;	
+			}	
+		}
+		@include respond-to(1000){
+			font-size: 16px;
+		}
+
+		h1{
+			color: #fff;
+			line-height: 1.2;
+			text-transform: uppercase;
+			margin-bottom: 0;
+			padding-top: 0;
+			// .previewFrame &{
+			// 	font-size: ms(5);
+			// }
+		}
+	
+	}
+}
+
+
+.main{
+	//background-color: #f5f5f5;
+	padding: 3em 2em;
+	width: 100%;
+	@include respond-to(640){
+		padding: 3em 3em 2em;
+	}
+
+	&__content{
+		@include container;
+		max-width: 60em;
+	}
+	h3,h4,h5{
+		border-bottom: 1px solid currentColor;
+		padding-bottom: 0.5em;
+		@include respond-to(480){
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+	}
+
+}
+.divider{
+	&:after{
+		content: "";
+		width: 2em;
+		height: 6px;
+		display: block;
+		background-color: $base-color;
+		margin-top: 0.75em;
+	}
+}
+
+.thumbnails{
+	padding: 0 2em 2em;
+	&__wrap{
+		@include clearfix;
+		max-width: 75em;
+  		margin: auto;
+		width: 100%;
+	}
+	&__photo{
+		@include span(6 of 12 0);
+		padding-bottom: span(6);
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		border: 2px solid #fff;
+		@include respond-to(480){
+			@include span(3 of 12 0);
+			padding-bottom: span(3);
+			border: none;
+		}
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.inner-intro{
+	width: 100%;
+	padding: 2em 0;
+	background-color: #f5f5f5;
+	&__content{
+		max-width: 65em;
+		margin: auto;
+		text-align: center;
+		padding: 0 2em;
+		@include respond-to(480){
+			padding: 0 5em;
+		}
+	}
+	h6{
+		font-family: $base-font;
+	}
+}
+
+
+
+/******************************************************
+*******************************************************
+TEAM PAGE
+*******************************************************
+******************************************************/
+
+
+.team__wrap{
+	max-width: 75em;
+	margin: auto;
+}
+.team-members{
+	//margin-top: 3em;
+}
+.team-member{
+	width: 100%;
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #ccc;
+	@include clearfix;
+	&:last-child{
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+	&__image{
+		// padding: 0 1em;
+		margin-bottom: 	1.5em;
+		@include respond-to(640){
+			@include span(4 of 12);
+			margin-bottom: 0;
+		}
+		img{
+			text-align: center;
+			width: 100%;
+			@include respond-to(640){
+				width: 100%;
+			}
+		}	
+	}
+	&__info{
+		// padding: 0 1em;
+		max-width: 46em;
+		@include respond-to(640){
+			@include span(8 of 12 last);
+		}	
+	}
+	&__content{
+		p:last-of-type{
+			margin-bottom: 0;
+		}
+	}
+	&:nth-child(even){
+		.team-member__image{
+			@include respond-to(640){
+				@include span(4 of 12 last);
+			}	
+		}
+		.team-member__info{
+			@include respond-to(640){
+				@include span(8 of 12);
+			}	
+		}
+	}
+	&__name{
+		font-family: $heading-font-bold; 
+		line-height: 1.2;
+		font-size: ms(4);
+		@include respond-to(480){
+			font-size: ms(5);
+		}
+		@include respond-to(1080){
+			font-size: ms(5);
+		}
+	}
+	&__title{
+		font-family: $heading-font; 
+		color: #999;
+		font-size: ms(1);
+	    @include respond-to(640){
+	        font-size: ms(2);
+	    }
+	}
+	&__top{
+		margin-bottom: 0.5em;
+	}
+	.divider{
+		&:after{
+			//margin-top: 1.3em;
+			width: 5em;
+			height: 3px;
+		}
+	}
+}
+
+.story-content{
+	h1,h2,h3,h4,h5{
+		text-align: center;
+	}
+	@include respond-to(640){
+		h1,h2,h3,h4,h5{
+			//padding-top: 0;
+			text-align: left;
+		}
+	}
+	img{
+		max-width: 15em;
+	}
+	.divider{
+		&:after{
+			margin: auto;
+			margin-top: 0.75em;
+			@include respond-to(640){
+				margin: 0;
+				margin-top: 0.75em;
+			}
+		}
+	}
+}
+.story-image{
+	text-align: center;
+	margin-top: 2em;
+	&:first-child{
+		margin-top: 0;
+	}
+}

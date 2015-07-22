@@ -1,0 +1,322 @@
+#s249880{
+	h1,h2,h3,h4,h5,h6{
+		padding-top: 0;
+	}
+}
+.hero-slider{
+	position: relative;
+	line-height: 0;
+	overflow: hidden;
+	z-index: 2;
+	width: 100%;
+	height: 20em;
+	@include clearfix;
+	@include respond-to(640){
+		height: 25em;
+	}
+	@include respond-to(920){
+		height: 37em;
+	}
+}
+.hero-slide{
+	width: 100%;
+	height: 20em;
+	@include respond-to(640){
+		height: 25em;
+	}
+	@include respond-to(920){
+		height: 37em;
+	}
+	p{
+		line-height: 0;
+		margin: 0;
+	}
+}
+.hero-text{
+	background-color: rgba(0,0,0,0.6);
+	padding: 1em;
+	display: inline-block;
+	position: absolute;
+	left: 1em;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 10px;
+	@include respond-to(640){
+		left: 2em;
+		font-size: 14px;
+	}
+	@include respond-to(1080){
+		left: 10%;
+		padding: 1.5em 2.5em 1.5em 2em;
+		font-size: 16px;
+	}
+	h1,h2,h3,h4,h5,h6{
+		color: #fff;
+		line-height: 1.2;
+		padding-top: 0;
+	}
+}
+.panels,.social{
+	@include clearfix;
+	padding: 0.35em 0.15em;
+}
+.panel{
+	
+	border: 3px solid #fff;
+	position: relative;
+	height: 7.5em;
+	cursor: pointer;
+	font-size: 13px;
+	@include respond-to(320){
+		//@include span(6 of 12 0);
+		height: 8.5em;
+	}
+	@include respond-to(480){
+		height: 9em;
+		font-size: 14px;
+		@include span(6 of 12 0);
+	}
+	@include respond-to(640){
+		height: 7em;
+		font-size: 16px;
+	}
+	@include respond-to(800){
+		@include span(3 of 12 0);
+	}
+	@include respond-to(920){
+		height: 8.5em;
+	}
+	&:before{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		content: "";
+		background-color: rgba(0,0,0,0.5);
+		z-index: 1;
+	}
+	&:after{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		top: 0;
+		content: "";
+		//height: 0;
+		background-color: rgba($base-color,0.9);
+		transform: scale(0);
+		z-index: 2;
+		transition: transform 150ms ease-in-out;
+	}
+	h5{
+		position: absolute;
+		z-index: 5;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: $heading-font-bold;
+		color: #fff;
+		width: 90%;
+		text-align: center;
+		text-transform: uppercase;
+		a{
+			color: #fff;
+			display: block;
+		}
+	}
+	&:hover{
+		&:after{
+			//background-color: rgba($base-color, 0.95);
+			transform: scale(1);
+		}
+	}
+	.bgPat{
+		height: 1em;
+	}
+}
+.panel-shop{
+	include respond-to(650){
+		@include span(3 of 12 last 0.1);
+	}
+}
+
+.intro{
+	@include clearfix;
+}
+.intro-panel{
+	
+	&__left, &__right{
+		display: none;
+	}
+	&__mobile{
+		line-height: 0;	
+	}
+	@include respond-to(640){
+		height: 30em;
+		&__mobile{
+			display: none;
+		}
+		&__right{
+			@include span(4 of 10 0 last);
+			display: block;
+			background-position: left center!important;
+		}
+		&__left{
+			background-position: right center!important;
+		}
+	}
+	@include respond-to(1080){
+		&__left{
+			@include span(3 of 10 0);
+			display: block;
+		}
+		&__right{
+			@include span(3 of 10 0 last);
+		}
+	}
+	
+
+	h6{
+		color: #666;
+		text-transform: uppercase;
+	}
+	h2{
+		color: $base-color;
+		text-transform: uppercase;
+		font-size: ms(5);
+		@include respond-to(1080){
+			font-size: ms(6);
+		}
+		&:after{
+			content:"";
+			height: 3px;
+			width: 1.5em;
+			display: block;
+			background-color: $base-color;
+			margin-top: 0.5em;
+		}
+	}
+}	
+.intro-content{
+	&__wrap{
+		padding: 2em;
+	}
+	@include respond-to(640){
+		//padding: 3em 7.5em;
+		@include span(6 of 10 0);
+	
+		&__wrap{
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: auto;
+		}
+	}
+	@include respond-to(800){
+		&__wrap{
+			padding: 3em;
+		}
+	}
+	@include respond-to(1080){
+		@include span(4 of 10 0);
+		&__wrap{
+			max-width: 27em;
+			margin: auto;
+			padding: 0;
+			width: 80%;
+		}
+	}
+}
+
+.social{
+	background: $grey;
+}
+.tweets{
+
+	@include respond-to(920){
+		@include span(9 of 12 0);
+	}
+	li{
+		
+		padding: 1.5em;
+		background-color: #fff;
+		&:nth-child(2){
+			background-color: $grey;
+		}
+		@include respond-to(480){
+			//padding: 2em;
+			@include span(6 of 12 0);
+			&:nth-child(1){
+				background-color: $grey;
+			}
+			&:nth-child(2){
+				background-color: $grey;
+			}
+		}
+		@include respond-to(640){
+			padding: 2em;
+		}
+		@include respond-to(920){
+			@include span(4 of 12 0);
+			&:nth-child(even){
+				background-color: $grey;
+			}
+			&:nth-child(odd){
+				background-color: #fff;
+			}
+		}
+		@include respond-to(1250){
+			padding: 3em;
+		}
+	}
+
+}
+.timePosted{
+	border-top: 1px solid #b7b7b7;
+	padding-top: 0.3em;
+	font-family: $base-font-bold;
+	margin-bottom: 0;
+}
+.panel-follow{
+	height: 10em;	
+	padding: 1em;
+	background-color: $base-color;
+	text-align: center;
+	h5{
+		color: #fff;
+		font-family: $heading-font-bold;
+		text-transform: uppercase;
+	}
+	@include respond-to(480){
+		@include span(6 of 12 0);
+	}
+	@include respond-to(920){
+		@include span(3 of 12 0 last);
+	}
+	@include respond-to(1080){
+		padding: 2em 3em;
+	}
+}
+.social-icon{
+	height: 4em;
+	width: 4em;
+	padding: 0.5em;
+	display: inline-block;
+	svg{
+		transition: transform 200ms ease;
+		fill: #fff;
+		&:hover{
+			transform: scale(1.05);
+		}
+	}
+	@include respond-to(1080){
+		height: 5em;
+		width: 5em;
+	}
+}
+.social-inner{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}

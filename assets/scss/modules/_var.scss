@@ -1,0 +1,54 @@
+// sans-serif
+$arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$lucidagrande: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+$trebuchet: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+$verdana: Verdana, Geneva, sans-serif;
+
+// serif
+$baskerville: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+$georgia: Georgia, Times, "Times New Roman", serif;
+$lucidabright: "Lucida Bright", Georgia, serif;
+$tnr: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+
+// monospaced
+$consolas: Consolas, monaco, monospace;
+$courier: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+$monaco: Monaco, Consolas, "Lucida Console", monospace;
+
+
+// User defined ------------------------------------------ //
+
+
+// overwrite defaults for modular scale
+//$ms-base: 0.9375em;
+$ms-base: 1em;
+$ms-ratio: 1.2;
+
+// Base font attributes ---- //
+
+$base-font-family: Lato, Arial, "Helvetica Neue", Helvetica, sans-serif;
+$base-font-size: 16;
+$base-line-height: 1.4;
+$blockquote: #e3e3e3;
+
+// Base colours ---- //
+
+$white: #FFFFFF;
+$black: #2f2f2f;
+$base-color: #1fb25a;
+$comp-color: #326e50;
+$grey: #dfdfdf;
+$lightGrey: #f8f8f8;
+
+$link: #1fb25a;
+$link-hover: lighten(#1fb25a, 10%);
+$link-focus: purple;
+
+$base-font: Lato, Arial, "Helvetica Neue", Helvetica, sans-serif;
+$base-font-bold: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+$heading-font: texgyreadventorregular, Arial, "Helvetica Neue", Helvetica, sans-serif;
+$heading-font-bold: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+$burger-height: 5px;
+$burger-gutter: 3px;

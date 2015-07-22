@@ -1,0 +1,269 @@
+/* ---------------------------------------------- *\
+
+  Partial: nav
+
+  All navigation styles here. This is sort that we can try keep things seperated and easy to maintain. You can
+  include all global navigation styles here. 
+
+\* ---------------------------------------------- */
+
+.main-nav{
+	display: none;
+	z-index: 99;
+	//display: inline-block;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	@include respond-to(920){
+		display: inline-block;
+	}
+	ul{
+		>li{
+			float: left;
+			position: relative;
+			a{
+				color: #000;
+				font-family: $heading-font-bold;
+				font-size: ms(0);
+				text-transform: uppercase;
+				padding: 1em 0.75em;
+				display: block;
+				text-rendering: optimizeLegibility;
+				&:hover{
+					color: $base-color;
+				}
+				@include respond-to(1200){
+					padding: 1em 1.2em;
+					font-size: 1em;
+				}
+			}
+			>ul{
+				display: none;
+				//box-shadow: 0 2px 6px 0 rgba(0,0,0,0.1);
+				top: 100%;
+				left: 4px;
+				background-color: #fff;
+				min-width: 10em;
+				padding: 0.75em 0.5em;
+				position: absolute;
+				white-space: nowrap;
+				//border: 1px solid #eee;
+				//border-top-color: transparent;
+				border-bottom: 2px solid $base-color;
+				.stuck &{
+					background-color: #eee;
+				}
+				li{
+					display: block;
+					float: none;
+					a{
+						font-size: ms(0);
+						font-size: 14px;
+						padding: 0.5em;
+						font-family: $base-font;
+					}
+					&:hover{
+						background-color: $base-color;
+						a{
+							color: #fff;
+						}
+					}
+				}
+			}
+			&:hover{
+				ul{
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.menu-wrap{
+	z-index: 999;
+	transform: translateX(-100%);
+	position: fixed;	
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 90%;
+	max-width: 18em;
+	height: 100%;
+	background-color: darken($base-color, 5%);
+	overflow: hidden;
+	box-shadow: 2px 0 3px 0 rgba(0,0,0,0.1);
+	transition: transform 200ms ease;
+
+	.show-menu &{
+		transform: translateX(0);
+	}
+	.parent ul{
+		display: none;
+	}
+	.mobile-menu{
+		height: 100%;
+		padding: 4em 0 0;
+		width: calc(100% + 18px);
+		overflow: hidden;
+		.nav{
+			height: 100%;
+			overflow-y: scroll;
+			a{
+				color: #fff;
+				padding: 0.6em 0.5em 0.6em 2em;
+				display: inline-block;
+				width: 100%;
+				font-family: $base-font-bold;
+			}
+
+			>ul{
+
+				>li{
+					border-bottom: 1px solid rgba(0,0,0,0.2);
+					&:hover{
+						background-color: darken($base-color, 15%);
+					}
+					>a{
+						font-size: ms(0);
+						text-transform: uppercase;
+					}
+				}
+			}
+		}
+		.parent{
+			>a{
+				position: relative;
+				&:after{
+					content: url("/carlhester-com/_img/images/down.svg");
+					width: 1em;
+					height: 1em;
+					display: table;
+					position: absolute;
+					right: 35px;
+					top: 8px;
+					transition: transform 200ms ease-in-out;
+					transform-origin: 50%, 50%;
+				}
+				&.open{
+					&:after{
+						transform: rotate(180deg);
+					}
+				}
+			}
+			.open{
+				background-color: darken($base-color, 15%);
+			}
+			ul{
+				background-color: darken($base-color, 10%);
+				padding: 0.5em 0em 1em;
+				a{
+					font-size: 14px;
+					font-family: $base-font;
+					padding: 0.5em 0 0.5em 3em;
+					&:hover{
+						background-color: darken($base-color, 15%);
+					}	
+				}
+			}
+		}
+	}
+}
+
+
+.close-button{
+	width: 2em;
+	height: 2em;
+	//background-color: #333;
+	// margin-top: 1em;
+	// margin-right: 1em;
+	// float: right;
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	cursor: pointer;
+	fill: #fff;
+	transition: transform 400ms ease-out;
+	.show-menu &{
+		transform: rotate(720deg);
+		transition-delay: 200ms;
+	}
+}
+
+.mobile-menu{
+	.nav{
+		>ul{
+			li{
+				position: relative;
+				transform: translateY(3em);
+				transition: transform 400ms ease-out;
+				&:nth-child(1){
+						transform: translateY(70em);
+					}
+					&:nth-child(2){
+						transform: translateY(75em);
+					}
+					&:nth-child(3){
+						transform: translateY(80em);
+					}
+					&:nth-child(4){
+						transform: translateY(85em);
+					}
+					&:nth-child(5){
+						transform: translateY(90em);
+					}
+					&:nth-child(6){
+						transform: translateY(95em);
+					}
+					&:nth-child(7){
+						transform: translateY(100em);
+					}
+					&:nth-child(8){
+						transform: translateY(105em);
+					}
+					&:nth-child(9){
+						transform: translateY(110em);
+					}
+					&:nth-child(10){
+						transform: translateY(115em);
+					}
+			}
+		}
+		.show-menu &{
+			>ul{
+				li{
+					transform: translateY(0);
+					&:nth-child(1){
+						transition-delay: 0.1s;
+					}
+					&:nth-child(2){
+						transition-delay: 0.15s;
+					}
+					&:nth-child(3){
+						transition-delay: 0.2s;
+					}
+					&:nth-child(4){
+						transition-delay: 0.25s;
+					}
+					&:nth-child(5){
+						transition-delay: 0.3s;
+					}
+					&:nth-child(6){
+						transition-delay: 0.35s;
+					}
+					&:nth-child(7){
+						transition-delay: 0.4s;
+					}
+					&:nth-child(8){
+						transition-delay: 0.45s;
+					}
+					&:nth-child(9){
+						transition-delay: 0.5s;
+					}
+					&:nth-child(10){
+						transition-delay: 0.55s;
+					}
+				}
+			}
+		}
+	}
+}
