@@ -321,6 +321,9 @@ p {
   margin-bottom: 0.75em;
   padding-top: 0.35em; }
 
+strong {
+  font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
 /* -----------------------------------------
 	10.0. Nav
 ----------------------------------------- */
@@ -727,6 +730,19 @@ header {
     background-image: url("/carlhester-com/_img/images/story-top.jpg"); }
   #s395855 .inner-hero {
     background-image: url("/carlhester-com/_img/images/teamTopImg.jpg"); }
+  #s395863 .inner-hero {
+    background-image: url("/carlhester-com/_img/images/supportTop.jpg"); }
+  #s395856 .inner-hero {
+    background-image: url("/carlhester-com/_img/images/yardTopImg2.jpg");
+    background-position: center top; }
+  #s395865 .inner-hero {
+    background-image: url("/carlhester-com/_img/images/routineTopImg.jpg");
+    background-position: left top; }
+  #s395857 .inner-hero {
+    background-image: url("/carlhester-com/_img/images/diaryTop.jpg");
+    background-position: center top; }
+  #s395860 .inner-hero {
+    background-image: url("/carlhester-com/_img/images/linksTop.jpg"); }
   .previewFrame .inner-hero {
     height: 600px; }
   @media  (min-width: 480px) {
@@ -737,10 +753,19 @@ header {
       height: 55vh; } }
   @media  (min-width: 920px) {
     .inner-hero {
-      height: 65vh; } }
+      height: 65vh; }
+      #s395855 .inner-hero, #s395863 .inner-hero, #s395856 .inner-hero, #s395857 .inner-hero {
+        height: 80vh; }
+      #s395855.previewFrame .inner-hero, #s395863.previewFrame .inner-hero, #s395856.previewFrame .inner-hero, #s395857.previewFrame .inner-hero {
+        height: 600px; } }
+  .inner-hero__text-wrap {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    position: relative; }
   .inner-hero__text {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -758,7 +783,7 @@ header {
         width: 75%; } }
     @media  (min-width: 800px) {
       .inner-hero__text {
-        bottom: 25%;
+        bottom: 10%;
         top: auto;
         left: 6em;
         -webkit-transform: none;
@@ -766,12 +791,9 @@ header {
                 transform: none;
         background-color: rgba(31, 178, 90, 0.9);
         width: auto; }
-        #s395853 .inner-hero__text {
-          right: 6em;
+        #s395853 .inner-hero__text, #s395855 .inner-hero__text, #s395857 .inner-hero__text {
+          right: 10em;
           left: auto; } }
-    @media  (min-width: 1000px) {
-      .inner-hero__text {
-        font-size: 16px; } }
     .inner-hero__text h1 {
       color: #fff;
       line-height: 1.2;
@@ -847,7 +869,7 @@ header {
   padding: 2em 0;
   background-color: #f5f5f5; }
   .inner-intro__content {
-    max-width: 65em;
+    max-width: 69em;
     margin: auto;
     text-align: center;
     padding: 0 2em; }
@@ -855,14 +877,15 @@ header {
       .inner-intro__content {
         padding: 0 5em; } }
   .inner-intro h6 {
-    font-family: Lato, Arial, "Helvetica Neue", Helvetica, sans-serif; }
+    font-family: Lato, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.1em; }
 
 /******************************************************
 *******************************************************
 TEAM PAGE
 *******************************************************
 ******************************************************/
-.team__wrap {
+.content__wrapper {
   max-width: 75em;
   margin: auto; }
 
@@ -935,26 +958,38 @@ TEAM PAGE
     width: 5em;
     height: 3px; }
 
-.story-content h1, .story-content h2, .story-content h3, .story-content h4, .story-content h5 {
+.content-cent h1, .content-cent h2, .content-cent h3, .content-cent h4, .content-cent h5 {
   text-align: center; }
 @media  (min-width: 640px) {
-  .story-content h1, .story-content h2, .story-content h3, .story-content h4, .story-content h5 {
+  .content-cent h1, .content-cent h2, .content-cent h3, .content-cent h4, .content-cent h5 {
     text-align: left; } }
-.story-content img {
+.content-cent img {
   max-width: 15em; }
-.story-content .divider:after {
+.content-cent .divider:after {
   margin: auto;
   margin-top: 0.75em; }
   @media  (min-width: 640px) {
-    .story-content .divider:after {
+    .content-cent .divider:after {
       margin: 0;
       margin-top: 0.75em; } }
 
-.story-image {
+.content-image {
   text-align: center;
   margin-top: 2em; }
-  .story-image:first-child {
+  .content-image:first-child {
     margin-top: 0; }
+
+.routine strong {
+  color: #1fb25a; }
+
+.entry {
+  margin-bottom: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #ccc; }
+  .entry:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none; }
 
 .owl-carousel .owl-wrapper:after {
   content: ".";
@@ -1378,6 +1413,48 @@ img.mfp-img {
   .mfp-container {
     padding-left: 6px;
     padding-right: 6px; } }
+
+/*////////////////////////////////////
+
+Zoom JS
+
+////////////////////////////////////*/
+img[data-action="zoom"] {
+  cursor: pointer;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in; }
+
+.zoom-img, .zoom-img-wrap {
+  position: relative;
+  z-index: 666;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
+
+img.zoom-img {
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out; }
+
+.zoom-overlay {
+  z-index: 420;
+  background: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  filter: "alpha(opacity=0)";
+  opacity: 0;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms; }
+
+.zoom-overlay-open .zoom-overlay {
+  filter: "alpha(opacity=100)";
+  opacity: 1; }
+
+.zoom-overlay-open, .zoom-overlay-transitioning {
+  cursor: default; }
 
 #s249880 h1, #s249880 h2, #s249880 h3, #s249880 h4, #s249880 h5, #s249880 h6 {
   padding-top: 0; }

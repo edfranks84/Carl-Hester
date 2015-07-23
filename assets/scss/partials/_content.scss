@@ -15,6 +15,25 @@
 	#s395855 &{
 		background-image: url("/carlhester-com/_img/images/teamTopImg.jpg");
 	}
+	#s395863 &{
+		background-image: url("/carlhester-com/_img/images/supportTop.jpg");
+	}
+	#s395856 &{
+		background-image: url("/carlhester-com/_img/images/yardTopImg2.jpg");
+		background-position: center top;
+	}
+	#s395865 &{
+		background-image: url("/carlhester-com/_img/images/routineTopImg.jpg");
+		background-position: left top;
+	}
+	#s395857 &{
+		background-image: url("/carlhester-com/_img/images/diaryTop.jpg");
+		background-position: center top;
+	}
+	#s395860 &{
+		background-image: url("/carlhester-com/_img/images/linksTop.jpg");
+		//background-position: center top;
+	}
 	.previewFrame &{
 		height: 600px;
 	}
@@ -26,10 +45,22 @@
 	}
 	@include respond-to(920){
 		height: 65vh;
+		#s395855 &, #s395863 &, #s395856 &, #s395857 &{
+			height: 80vh;
+		}
+		#s395855.previewFrame &, #s395863.previewFrame &, #s395856.previewFrame &, #s395857.previewFrame &{
+			height: 600px;
+		}
+	}
+	&__text-wrap{
+		  max-width: 1200px;
+		  margin: auto;
+		  height: 100%;
+		  position: relative;
 	}
 	&__text{
 		position: absolute;
-		top: 50%;
+		top: 70%;
 		left: 50%;
 		transform: translate(-50%,-50%);
 		padding: 1em 2em 1.5em;
@@ -48,19 +79,19 @@
 			width: 75%;
 		}
 		@include respond-to(800){
-			bottom: 25%;
+			bottom: 10%;
 			top: auto;
 			left: 6em;
 			transform: none;
 			background-color: rgba($base-color, 0.9);
 			width: auto;
-			#s395853 &{
-				right: 6em;
+			#s395853 &, #s395855 &, #s395857 &{
+				right: 10em;
 				left: auto;	
 			}	
 		}
 		@include respond-to(1000){
-			font-size: 16px;
+			//font-size: 16px;
 		}
 
 		h1{
@@ -146,7 +177,7 @@
 	padding: 2em 0;
 	background-color: #f5f5f5;
 	&__content{
-		max-width: 65em;
+		max-width: 69em;
 		margin: auto;
 		text-align: center;
 		padding: 0 2em;
@@ -156,6 +187,7 @@
 	}
 	h6{
 		font-family: $base-font;
+		font-size: 1.1em;
 	}
 }
 
@@ -168,7 +200,7 @@ TEAM PAGE
 ******************************************************/
 
 
-.team__wrap{
+.content__wrapper{
 	max-width: 75em;
 	margin: auto;
 }
@@ -255,7 +287,7 @@ TEAM PAGE
 	}
 }
 
-.story-content{
+.content-cent{
 	h1,h2,h3,h4,h5{
 		text-align: center;
 	}
@@ -279,10 +311,27 @@ TEAM PAGE
 		}
 	}
 }
-.story-image{
+.content-image{
 	text-align: center;
 	margin-top: 2em;
 	&:first-child{
 		margin-top: 0;
+	}
+}
+
+.routine{
+	strong{
+		color: $base-color;
+	}
+}
+
+.entry{
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid #ccc;
+	&:last-of-type{
+		margin-bottom: 0;
+		padding-bottom: 0;
+		border-bottom: none;
 	}
 }
