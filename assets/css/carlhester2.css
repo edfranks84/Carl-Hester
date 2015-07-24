@@ -357,7 +357,7 @@ strong {
       padding: 1em 0.75em;
       display: block;
       text-rendering: optimizeLegibility; }
-      .main-nav ul > li a:hover {
+      .main-nav ul > li a:hover, .main-nav ul > li a.linkActive {
         color: #1fb25a; }
       @media  (min-width: 1200px) {
         .main-nav ul > li a {
@@ -728,21 +728,29 @@ header {
   background-position: center center; }
   #s395853 .inner-hero {
     background-image: url("/carlhester-com/_img/images/story-top.jpg"); }
+  #s395854 .inner-hero {
+    background-image: url("/carlhester-com/_img/images/horsesTop2.jpg");
+    background-position: center top; }
   #s395855 .inner-hero {
     background-image: url("/carlhester-com/_img/images/teamTopImg.jpg"); }
   #s395863 .inner-hero {
-    background-image: url("/carlhester-com/_img/images/supportTop.jpg"); }
+    background-image: url("/carlhester-com/_img/images/supportTop.jpg");
+    background-position: center top; }
   #s395856 .inner-hero {
     background-image: url("/carlhester-com/_img/images/yardTopImg2.jpg");
     background-position: center top; }
   #s395865 .inner-hero {
-    background-image: url("/carlhester-com/_img/images/routineTopImg.jpg");
+    background-image: url("/carlhester-com/_img/images/routineTop.jpg");
     background-position: left top; }
   #s395857 .inner-hero {
     background-image: url("/carlhester-com/_img/images/diaryTop.jpg");
     background-position: center top; }
   #s395860 .inner-hero {
-    background-image: url("/carlhester-com/_img/images/linksTop.jpg"); }
+    background-image: url("/carlhester-com/_img/images/linksTop4.jpg");
+    background-position: center top; }
+  #s395861 .inner-hero {
+    background-image: url("/carlhester-com/_img/images/contactTop.jpg");
+    background-position: center top; }
   .previewFrame .inner-hero {
     height: 600px; }
   @media  (min-width: 480px) {
@@ -785,14 +793,14 @@ header {
       .inner-hero__text {
         bottom: 10%;
         top: auto;
-        left: 6em;
+        left: 3em;
         -webkit-transform: none;
             -ms-transform: none;
                 transform: none;
         background-color: rgba(31, 178, 90, 0.9);
         width: auto; }
-        #s395853 .inner-hero__text, #s395855 .inner-hero__text, #s395857 .inner-hero__text {
-          right: 10em;
+        #s395853 .inner-hero__text, #s395855 .inner-hero__text, #s395857 .inner-hero__text, #s395865 .inner-hero__text {
+          right: 3em;
           left: auto; } }
     .inner-hero__text h1 {
       color: #fff;
@@ -990,6 +998,86 @@ TEAM PAGE
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: none; }
+
+/******************************************************
+*******************************************************
+LINKS PAGE
+*******************************************************
+******************************************************/
+.link-logos__wrap:before, .link-logos__wrap:after {
+  content: "";
+  display: table; }
+.link-logos__wrap:after {
+  clear: both; }
+.link-logos__item {
+  position: relative;
+  text-align: center;
+  margin: 0.25em 0;
+  top: 0;
+  -webkit-transition: all 200ms ease-in-out;
+          transition: all 200ms ease-in-out;
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 2.08333%;
+  padding-right: 2.08333%; }
+  @media  (min-width: 480px) {
+    .link-logos__item {
+      box-sizing: border-box;
+      width: 33.33333%;
+      float: left;
+      padding-left: 2.08333%;
+      padding-right: 2.08333%;
+      margin: 0.5em 0; } }
+  @media  (min-width: 1080px) {
+    .link-logos__item {
+      box-sizing: border-box;
+      width: 25%;
+      float: left;
+      padding-left: 2.08333%;
+      padding-right: 2.08333%;
+      margin: 1em 0; } }
+  .link-logos__item:hover {
+    box-shadow: 0 0 0 1px #ddd, 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    top: -5px; }
+    .link-logos__item:hover a:after {
+      -webkit-transition: opacity 300ms ease;
+              transition: opacity 300ms ease;
+      opacity: 1; }
+    .link-logos__item:hover img {
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+      opacity: 0.75; }
+  .link-logos__item img {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%); }
+  .link-logos__item a {
+    display: block; }
+    .link-logos__item a:after {
+      content: attr(data-title);
+      width: 94%;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      padding: 0.5em 0.5em 0.7em;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+      display: block;
+      margin: auto;
+      line-height: 1;
+      opacity: 0;
+      background-color: rgba(31, 178, 90, 0.9);
+      -webkit-transition: opacity 200ms ease;
+              transition: opacity 200ms ease; }
+      @media  (min-width: 1080px) {
+        .link-logos__item a:after {
+          font-size: 1.2em; } }
 
 .owl-carousel .owl-wrapper:after {
   content: ".";
@@ -1772,6 +1860,82 @@ img.zoom-img {
   This is a work-in-progress. Please deploy your own method or use my exaple below. 
 
 \* ---------------------------------------------- */
+.horse-wrap:before, .horse-wrap:after {
+  content: "";
+  display: table; }
+.horse-wrap:after {
+  clear: both; }
+
+.horse {
+  width: 100%;
+  margin-bottom: 1.5em; }
+  .horse:before, .horse:after {
+    content: "";
+    display: table; }
+  .horse:after {
+    clear: both; }
+  .horse:hover .horse-info {
+    background-color: #1fb25a;
+    background-image: -webkit-linear-gradient(330deg, #1fb25a, #178744);
+    background-image: linear-gradient(120deg, #1fb25a, #178744);
+    border-color: #105b2e; }
+  .horse:hover .horse__title, .horse:hover .horse-stat__title, .horse:hover .horse-stat__value {
+    color: #fff; }
+  .horse:hover .horse-stat {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
+
+.horse__image {
+  width: 309px;
+  float: left;
+  line-height: 0; }
+
+.horse-info {
+  width: calc(100% - 309px);
+  padding: 1.5em;
+  float: left;
+  background-color: #f9f9eb;
+  border: 1px solid #ddd;
+  border-left: none; }
+  @media  (min-width: 920px) {
+    .horse-info {
+      padding: 1.5em 3em; } }
+
+.horse__title {
+  color: #1fb25a;
+  font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  margin-bottom: 0.75em;
+  width: 100%;
+  font-size: 1.728em;
+  text-transform: uppercase; }
+
+.horse-stat {
+  width: 100%;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.3em;
+  border-bottom: 1px solid #ddd; }
+  .horse-stat:before, .horse-stat:after {
+    content: "";
+    display: table; }
+  .horse-stat:after {
+    clear: both; }
+  .horse-stat:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none; }
+  .horse-stat__title {
+    font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #666666;
+    float: left;
+    width: 160px;
+    font-size: 0.83333em; }
+  .horse-stat__value {
+    font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #222;
+    float: left;
+    width: calc(100% - 160px);
+    font-size: 0.83333em; }
+
 /* -----------------------------------------
 	13.0. Footer
 ----------------------------------------- */
