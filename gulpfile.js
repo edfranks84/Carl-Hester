@@ -76,7 +76,7 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src('assets/images/*')
+  return gulp.src(['assets/images/*','!assets/images/*.db'])
     .pipe(imagemin())
     .pipe(gulp.dest('assets/images'));
 //    .pipe(notify({message: 'images minified'}));

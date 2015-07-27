@@ -23,6 +23,10 @@
 		background-image: url("/carlhester-com/_img/images/supportTop.jpg");
 		background-position: center top;
 	}
+	#s395864 &{
+		background-image: url("/carlhester-com/_img/images/studTop.jpg");
+		background-position: center top;
+	}
 	#s395856 &{
 		background-image: url("/carlhester-com/_img/images/yardTopImg2.jpg");
 		background-position: center top;
@@ -33,6 +37,10 @@
 	}
 	#s395857 &{
 		background-image: url("/carlhester-com/_img/images/diaryTop.jpg");
+		background-position: center top;
+	}
+	#s395858 &{
+		background-image: url("/carlhester-com/_img/images/resultsTop.jpg");
 		background-position: center top;
 	}
 	#s395860 &{
@@ -55,10 +63,13 @@
 	}
 	@include respond-to(920){
 		height: 65vh;
-		#s395855 &, #s395863 &, #s395856 &, #s395857 &{
+		#s395855 &, #s395863 &, #s395856 &, #s395854 &, #s395858 &{
 			height: 80vh;
 		}
-		#s395855.previewFrame &, #s395863.previewFrame &, #s395856.previewFrame &, #s395857.previewFrame &{
+		#s395861 &{
+			height: 95vh;
+		}
+		#s395855.previewFrame &, #s395863.previewFrame &, #s395856.previewFrame &, #s395857.previewFrame &, #s395858.previewFrame &{
 			height: 600px;
 		}
 		
@@ -92,7 +103,7 @@
 			transform: none;
 			background-color: rgba($base-color, 0.9);
 			width: auto;
-			#s395853 &, #s395855 &, #s395857 &, #s395865 &{
+			#s395853 &, #s395855 &, #s395865 &, #s395854 &{
 				right: 3em;
 				left: auto;	
 			}	
@@ -412,3 +423,135 @@ LINKS PAGE
 		}
 	}
 }
+
+/******************************************************
+*******************************************************
+RESULTS PAGE
+*******************************************************
+******************************************************/
+
+.outer-results-wrap{
+	height: 40em;
+	max-height: 80vh;
+	position: relative;
+	overflow-y: scroll;
+	width: 100%;
+	font-size: 14px;
+	border-bottom: 1px solid #bbb;
+	@include clearfix;
+	@include respond-to(700){
+		font-size: 16px;
+	}
+}
+.horseTrainingItemHeader{
+	border-bottom: 3px solid $base-color;
+	padding: 0 2em 1em;
+	width: 100%;
+	background-color: #fff;
+	@include clearfix;
+	.horseTrainingItem1, .horseTrainingItem2, .horseTrainingItem4{
+		font-family: $heading-font-bold;
+		font-size: ms(1);
+		color: $base-color;
+		text-transform: uppercase;
+		display: none;
+		@include respond-to(640){
+			display: block;
+		}
+	}
+}
+
+.horseTrainingItem1{
+	//@include span(7 of 12);
+	@include respond-to(640){
+		@include span(7 of 12);
+		border-bottom: none;
+		padding-bottom: 0;
+		margin-bottom: 0;
+	}
+	@include respond-to(860){
+		@include span(6 of 12);
+	}
+}
+.horseTrainingItem2{
+	//@include span(3 of 12);
+	@include respond-to(640){
+		@include span(3 of 12);
+	}
+	@include respond-to(860){
+		@include span(3 of 12);
+	}
+}
+.horseTrainingItem4{
+	@include respond-to(640){
+		@include span(2 of 12 last);
+	}
+	@include respond-to(860){
+		@include span(3 of 12 last);
+	}
+}
+.horseTrainingItem2,.horseTrainingItem4{
+	@include respond-to(640){
+		font-family: $heading-font-bold;
+		color: $base-color;
+		font-size: ms(2);
+	}
+	@include respond-to(860){
+		font-size: ms(3);
+	}
+}
+.horseTrainingItem{
+	width: 100%;
+	padding: 2em;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	@include clearfix;
+	&:hover{
+		background-color: #f6f6f6;
+	}
+	.horseTrainingItem1, .horseTrainingItem2, .horseTrainingItem4{
+		@include respond-to(0to640){
+			padding-bottom: 0.5em;
+			margin-bottom: 0.5em;
+			border-bottom: 1px solid #ddd;
+			@include clearfix;
+		}
+		&:before {
+			content: attr(data-label)": ";
+			font-family: $heading-font-bold;
+			color: $base-color;
+			font-size: ms(1);
+			text-transform: uppercase;
+			width: 5.5em; 
+			display: inline-block;
+			@include respond-to(640){
+				display: none;
+			}
+	  	}
+	}
+	.horseTrainingItem1{
+		&:before {
+			margin-bottom: 0.5em;
+		}
+	}
+}
+.horseTrainingItemWrap{
+	@include clearfix;
+	// float: right;
+	// width: calc(100% - 5.5em);
+	font-family: $base-font-bold;
+	font-size: ms(0);
+	color: #666;
+	text-transform: uppercase;
+	@include respond-to(640){
+		width: 100%;
+	}
+}
+.horseTrainingItemLabel{
+	color: #222;
+	text-transform: none;
+	display: inline-block;
+	margin-right: 1em;
+	width: 3em;
+}
+

@@ -736,6 +736,9 @@ header {
   #s395863 .inner-hero {
     background-image: url("/carlhester-com/_img/images/supportTop.jpg");
     background-position: center top; }
+  #s395864 .inner-hero {
+    background-image: url("/carlhester-com/_img/images/studTop.jpg");
+    background-position: center top; }
   #s395856 .inner-hero {
     background-image: url("/carlhester-com/_img/images/yardTopImg2.jpg");
     background-position: center top; }
@@ -744,6 +747,9 @@ header {
     background-position: left top; }
   #s395857 .inner-hero {
     background-image: url("/carlhester-com/_img/images/diaryTop.jpg");
+    background-position: center top; }
+  #s395858 .inner-hero {
+    background-image: url("/carlhester-com/_img/images/resultsTop.jpg");
     background-position: center top; }
   #s395860 .inner-hero {
     background-image: url("/carlhester-com/_img/images/linksTop4.jpg");
@@ -762,9 +768,11 @@ header {
   @media  (min-width: 920px) {
     .inner-hero {
       height: 65vh; }
-      #s395855 .inner-hero, #s395863 .inner-hero, #s395856 .inner-hero, #s395857 .inner-hero {
+      #s395855 .inner-hero, #s395863 .inner-hero, #s395856 .inner-hero, #s395854 .inner-hero, #s395858 .inner-hero {
         height: 80vh; }
-      #s395855.previewFrame .inner-hero, #s395863.previewFrame .inner-hero, #s395856.previewFrame .inner-hero, #s395857.previewFrame .inner-hero {
+      #s395861 .inner-hero {
+        height: 95vh; }
+      #s395855.previewFrame .inner-hero, #s395863.previewFrame .inner-hero, #s395856.previewFrame .inner-hero, #s395857.previewFrame .inner-hero, #s395858.previewFrame .inner-hero {
         height: 600px; } }
   .inner-hero__text-wrap {
     max-width: 1200px;
@@ -799,7 +807,7 @@ header {
                 transform: none;
         background-color: rgba(31, 178, 90, 0.9);
         width: auto; }
-        #s395853 .inner-hero__text, #s395855 .inner-hero__text, #s395857 .inner-hero__text, #s395865 .inner-hero__text {
+        #s395853 .inner-hero__text, #s395855 .inner-hero__text, #s395865 .inner-hero__text, #s395854 .inner-hero__text {
           right: 3em;
           left: auto; } }
     .inner-hero__text h1 {
@@ -1078,6 +1086,150 @@ LINKS PAGE
       @media  (min-width: 1080px) {
         .link-logos__item a:after {
           font-size: 1.2em; } }
+
+/******************************************************
+*******************************************************
+RESULTS PAGE
+*******************************************************
+******************************************************/
+.outer-results-wrap {
+  height: 40em;
+  max-height: 80vh;
+  position: relative;
+  overflow-y: scroll;
+  width: 100%;
+  font-size: 14px;
+  border-bottom: 1px solid #bbb; }
+  .outer-results-wrap:before, .outer-results-wrap:after {
+    content: "";
+    display: table; }
+  .outer-results-wrap:after {
+    clear: both; }
+  @media  (min-width: 700px) {
+    .outer-results-wrap {
+      font-size: 16px; } }
+
+.horseTrainingItemHeader {
+  border-bottom: 3px solid #1fb25a;
+  padding: 0 2em 1em;
+  width: 100%;
+  background-color: #fff; }
+  .horseTrainingItemHeader:before, .horseTrainingItemHeader:after {
+    content: "";
+    display: table; }
+  .horseTrainingItemHeader:after {
+    clear: both; }
+  .horseTrainingItemHeader .horseTrainingItem1, .horseTrainingItemHeader .horseTrainingItem2, .horseTrainingItemHeader .horseTrainingItem4 {
+    font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 1.2em;
+    color: #1fb25a;
+    text-transform: uppercase;
+    display: none; }
+    @media  (min-width: 640px) {
+      .horseTrainingItemHeader .horseTrainingItem1, .horseTrainingItemHeader .horseTrainingItem2, .horseTrainingItemHeader .horseTrainingItem4 {
+        display: block; } }
+
+@media  (min-width: 640px) {
+  .horseTrainingItem1 {
+    width: 57.14286%;
+    float: left;
+    margin-right: 2.85714%;
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0; } }
+@media  (min-width: 860px) {
+  .horseTrainingItem1 {
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%; } }
+
+@media  (min-width: 640px) {
+  .horseTrainingItem2 {
+    width: 22.85714%;
+    float: left;
+    margin-right: 2.85714%; } }
+@media  (min-width: 860px) {
+  .horseTrainingItem2 {
+    width: 22.85714%;
+    float: left;
+    margin-right: 2.85714%; } }
+
+@media  (min-width: 640px) {
+  .horseTrainingItem4 {
+    width: 14.28571%;
+    float: right;
+    margin-right: 0; } }
+@media  (min-width: 860px) {
+  .horseTrainingItem4 {
+    width: 22.85714%;
+    float: right;
+    margin-right: 0; } }
+
+@media  (min-width: 640px) {
+  .horseTrainingItem2, .horseTrainingItem4 {
+    font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #1fb25a;
+    font-size: 1.44em; } }
+@media  (min-width: 860px) {
+  .horseTrainingItem2, .horseTrainingItem4 {
+    font-size: 1.728em; } }
+
+.horseTrainingItem {
+  width: 100%;
+  padding: 2em;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff; }
+  .horseTrainingItem:before, .horseTrainingItem:after {
+    content: "";
+    display: table; }
+  .horseTrainingItem:after {
+    clear: both; }
+  .horseTrainingItem:hover {
+    background-color: #f6f6f6; }
+  @media  (min-width: 0px) and (max-width: 640px) {
+    .horseTrainingItem .horseTrainingItem1, .horseTrainingItem .horseTrainingItem2, .horseTrainingItem .horseTrainingItem4 {
+      padding-bottom: 0.5em;
+      margin-bottom: 0.5em;
+      border-bottom: 1px solid #ddd; }
+      .horseTrainingItem .horseTrainingItem1:before, .horseTrainingItem .horseTrainingItem1:after, .horseTrainingItem .horseTrainingItem2:before, .horseTrainingItem .horseTrainingItem2:after, .horseTrainingItem .horseTrainingItem4:before, .horseTrainingItem .horseTrainingItem4:after {
+        content: "";
+        display: table; }
+      .horseTrainingItem .horseTrainingItem1:after, .horseTrainingItem .horseTrainingItem2:after, .horseTrainingItem .horseTrainingItem4:after {
+        clear: both; } }
+  .horseTrainingItem .horseTrainingItem1:before, .horseTrainingItem .horseTrainingItem2:before, .horseTrainingItem .horseTrainingItem4:before {
+    content: attr(data-label) ": ";
+    font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #1fb25a;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    width: 5.5em;
+    display: inline-block; }
+    @media  (min-width: 640px) {
+      .horseTrainingItem .horseTrainingItem1:before, .horseTrainingItem .horseTrainingItem2:before, .horseTrainingItem .horseTrainingItem4:before {
+        display: none; } }
+  .horseTrainingItem .horseTrainingItem1:before {
+    margin-bottom: 0.5em; }
+
+.horseTrainingItemWrap {
+  font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1em;
+  color: #666;
+  text-transform: uppercase; }
+  .horseTrainingItemWrap:before, .horseTrainingItemWrap:after {
+    content: "";
+    display: table; }
+  .horseTrainingItemWrap:after {
+    clear: both; }
+  @media  (min-width: 640px) {
+    .horseTrainingItemWrap {
+      width: 100%; } }
+
+.horseTrainingItemLabel {
+  color: #222;
+  text-transform: none;
+  display: inline-block;
+  margin-right: 1em;
+  width: 3em; }
 
 .owl-carousel .owl-wrapper:after {
   content: ".";
@@ -1868,34 +2020,58 @@ img.zoom-img {
 
 .horse {
   width: 100%;
+  max-width: 25em;
+  margin: auto;
   margin-bottom: 1.5em; }
   .horse:before, .horse:after {
     content: "";
     display: table; }
   .horse:after {
     clear: both; }
+  @media  (min-width: 860px) {
+    .horse {
+      max-width: none; } }
   .horse:hover .horse-info {
     background-color: #1fb25a;
     background-image: -webkit-linear-gradient(330deg, #1fb25a, #178744);
     background-image: linear-gradient(120deg, #1fb25a, #178744);
     border-color: #105b2e; }
-  .horse:hover .horse__title, .horse:hover .horse-stat__title, .horse:hover .horse-stat__value {
+  .horse:hover .horse__title, .horse:hover .horse-stat__title, .horse:hover .horse-stat__value, .horse:hover .horse-stat__info, .horse:hover a {
     color: #fff; }
   .horse:hover .horse-stat {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25); }
+    .horse:hover .horse-stat:last-child {
+      border-bottom: none; }
 
 .horse__image {
-  width: 309px;
-  float: left;
+  width: 100%;
   line-height: 0; }
+  @media  (min-width: 860px) {
+    .horse__image {
+      width: 400px;
+      float: left; } }
+  .horse__image img {
+    width: 100%; }
 
 .horse-info {
-  width: calc(100% - 309px);
+  width: 100%;
   padding: 1.5em;
-  float: left;
   background-color: #f9f9eb;
   border: 1px solid #ddd;
-  border-left: none; }
+  -webkit-transition: all 200ms ease-in-out;
+          transition: all 200ms ease-in-out; }
+  .horse-info:before, .horse-info:after {
+    content: "";
+    display: table; }
+  .horse-info:after {
+    clear: both; }
+  @media  (min-width: 860px) {
+    .horse-info {
+      width: calc(100% - 400px);
+      padding: 1.5em;
+      float: left;
+      height: 400px;
+      border-left-color: transparent; } }
   @media  (min-width: 920px) {
     .horse-info {
       padding: 1.5em 3em; } }
@@ -1906,7 +2082,8 @@ img.zoom-img {
   margin-bottom: 0.75em;
   width: 100%;
   font-size: 1.728em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1.1; }
 
 .horse-stat {
   width: 100%;
@@ -1923,18 +2100,60 @@ img.zoom-img {
     margin-bottom: 0;
     border-bottom: none; }
   .horse-stat__title {
-    font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
     color: #666666;
     float: left;
-    width: 160px;
-    font-size: 0.83333em; }
+    width: 115px; }
+    @media  (min-width: 860px) {
+      .horse-stat__title {
+        width: 140px; } }
   .horse-stat__value {
-    font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
     text-transform: uppercase;
     color: #222;
     float: left;
-    width: calc(100% - 160px);
+    width: calc(100% - 115px); }
+    @media  (min-width: 860px) {
+      .horse-stat__value {
+        width: calc(100% - 140px); } }
+  .horse-stat__info {
+    color: #666666; }
+  .horse-stat__info, .horse-stat__title, .horse-stat__value {
+    font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 0.83333em; }
+
+.stud-wrap .horse {
+  max-width: 31.25em; }
+  @media  (min-width: 860px) {
+    .stud-wrap .horse {
+      max-width: 31.25em; } }
+  @media  (min-width: 920px) {
+    .stud-wrap .horse {
+      max-width: none; } }
+@media  (min-width: 860px) {
+  .stud-wrap .horse-info {
+    float: none;
+    width: 100%;
+    border-left-color: #ddd; } }
+@media  (min-width: 920px) {
+  .stud-wrap .horse-info {
+    padding: 1.5em;
+    width: calc(100% - 400px);
+    float: left;
+    height: 400px;
+    border-left-color: transparent; } }
+@media  (min-width: 1000px) {
+  .stud-wrap .horse-info {
+    padding: 1.5em 3em; } }
+.stud-wrap .horse__image {
+  width: 100%;
+  line-height: 0; }
+  @media  (min-width: 860px) {
+    .stud-wrap .horse__image {
+      width: 100%;
+      float: none; } }
+  @media  (min-width: 920px) {
+    .stud-wrap .horse__image {
+      width: 400px;
+      float: left; } }
 
 /* -----------------------------------------
 	13.0. Footer
