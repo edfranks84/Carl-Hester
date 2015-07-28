@@ -45,7 +45,7 @@
 	}
 	#s395860 &{
 		background-image: url("/carlhester-com/_img/images/linksTop4.jpg");
-		background-position: center top;
+		background-position: center bottom;
 	}
 	#s395861 &{
 		background-image: url("/carlhester-com/_img/images/contactTop.jpg");
@@ -69,7 +69,7 @@
 		#s395861 &{
 			height: 95vh;
 		}
-		#s395855.previewFrame &, #s395863.previewFrame &, #s395856.previewFrame &, #s395857.previewFrame &, #s395858.previewFrame &{
+		#s395855.previewFrame &, #s395863.previewFrame &, #s395856.previewFrame &, #s395857.previewFrame &, #s395858.previewFrame &, #s395854.previewFrame &, #s395861.previewFrame &{
 			height: 600px;
 		}
 		
@@ -103,7 +103,7 @@
 			transform: none;
 			background-color: rgba($base-color, 0.9);
 			width: auto;
-			#s395853 &, #s395855 &, #s395865 &, #s395854 &{
+			#s395853 &, #s395855 &, #s395865 &{
 				right: 3em;
 				left: auto;	
 			}	
@@ -147,7 +147,18 @@
 			padding-bottom: 0;
 		}
 	}
+	.main-title{
+		color: $base-color;
+		border-bottom: 3px solid $base-color;
+	}
 
+}
+
+
+
+.fixed-width{
+	min-width: 600px;
+	overflow-x: scroll;
 }
 .divider{
 	&:after{
@@ -431,8 +442,8 @@ RESULTS PAGE
 ******************************************************/
 
 .outer-results-wrap{
-	height: 40em;
-	max-height: 80vh;
+	height: 55em;
+	//max-height: 80vh;
 	position: relative;
 	overflow-y: scroll;
 	width: 100%;
@@ -502,20 +513,20 @@ RESULTS PAGE
 }
 .horseTrainingItem{
 	width: 100%;
-	padding: 2em;
+	padding: 1.5em;
 	border-bottom: 1px solid #ddd;
 	background-color: #fff;
 	@include clearfix;
-	&:hover{
+	// &:hover{
+	// 	background-color: #eee;
+	// }
+	@include respond-to(640){
+		padding: 2em;
+	}
+	&:nth-child(2n+1){
 		background-color: #f6f6f6;
 	}
 	.horseTrainingItem1, .horseTrainingItem2, .horseTrainingItem4{
-		@include respond-to(0to640){
-			padding-bottom: 0.5em;
-			margin-bottom: 0.5em;
-			border-bottom: 1px solid #ddd;
-			@include clearfix;
-		}
 		&:before {
 			content: attr(data-label)": ";
 			font-family: $heading-font-bold;
@@ -533,6 +544,14 @@ RESULTS PAGE
 		&:before {
 			margin-bottom: 0.5em;
 		}
+	}
+}
+.horseTrainingItem1, .horseTrainingItem2{
+	@include respond-to(0to640){
+		padding-bottom: 0.5em;
+		margin-bottom: 0.5em;
+		border-bottom: 1px solid #ddd;
+		@include clearfix;
 	}
 }
 .horseTrainingItemWrap{
@@ -554,4 +573,139 @@ RESULTS PAGE
 	margin-right: 1em;
 	width: 3em;
 }
+.horseTrainingItemClear{
+	display: none;
+}
 
+/******************************************************
+*******************************************************
+GALLERY PAGE
+*******************************************************
+******************************************************/
+
+.image-gallery-summary{
+	@include clearfix;
+}
+
+.image-gallery-summary form{
+	margin-bottom: 1em;
+	padding-bottom: 100%;
+	height: 0;
+	position: relative;
+	overflow: hidden;
+	background-position: center top;
+	cursor: pointer;
+	transition: all 200ms ease-in-out;
+	&:hover{
+		box-shadow: 0 0 0 3px $base-color, 0 4px 7px 2px rgba(0, 0, 0, 0.2);
+		transform: scale(1.02);
+	}
+	@include respond-to(400){
+		@include gallery(6 of 12);
+		padding-bottom: span(6);
+		margin-bottom: gutter();
+	}
+	@include respond-to(800){
+		@include gallery(4 of 12);
+		padding-bottom: span(4);
+	}
+}
+.image-gallery-summary-item-title{
+	position: absolute;
+	max-width: 95%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0.5em 0.75;
+	background-color: rgba($base-color, 0.9);
+	color: #fff;
+	text-transform: uppercase;
+	font-family: $heading-font-bold;
+	font-size: ms(2);
+	white-space: nowrap;
+	line-height: 1;
+	@include respond-to(460){
+		padding: 0.5em 1.3em;
+	}
+	@include respond-to(800){
+		font-size: ms(3);
+	}
+}
+.image-gallery-summary-item-image-top, .image-gallery-summary-item-category, .image-gallery-summary-item-created, .image-gallery-summary-item-updated, .image-gallery-summary-item-description, .image-gallery-summary-item-link{
+	display: none;
+}
+
+
+.image-gallery-title{
+	font-family: $heading-font-bold;
+	font-size: ms(3);
+	color: $base-color;
+	border-bottom: 3px solid $base-color;
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+	@include respond-to(480){
+		font-size: ms(4);
+	}
+}
+.image-gallery-item-title, .image-gallery-item-created, .image-gallery-item-updated, .image-gallery-item-description{
+	display: none;
+}
+.image-gallery{
+	.image-gallery-item{
+		float: left;
+		line-height: 0;
+		padding: 0.5em;
+		transition: all 200ms ease-in-out;
+		&:hover{
+			transform: scale(1.02);
+			img{
+				box-shadow: 0 0 0 3px $base-color, 0 4px 7px 2px rgba(0, 0, 0, 0.2);
+			}
+		}
+	}
+}
+.grid-sizer, .image-gallery-item{
+	width: 100%;
+	@include respond-to(300){
+		@include span(6 of 12 0);
+	}
+	@include respond-to(700){
+		@include span(4 of 12 0);
+	}
+	@include respond-to(1080){
+		@include span(3 of 12 0);
+	}
+}
+
+.resultsTable{
+	>table{
+		min-width: 600px;
+		width: 100%;
+		>tbody{
+			>tr{
+				>td{
+					padding: 0.5em;
+					&:nth-child(2),&:nth-child(3){
+						font-family: $heading-font-bold;
+						font-size: ms(1);
+						color: $base-color;
+					}
+				}
+			}
+		}
+	}
+	th{
+		font-family: $heading-font-bold;
+		font-size: ms(1);
+		color: $base-color;
+		text-transform: uppercase;
+		border-bottom: 3px solid $base-color;
+		padding: 0.5em;
+	}
+	a{
+		cursor: default;
+		color: #2f2f2f;
+	}
+
+
+}

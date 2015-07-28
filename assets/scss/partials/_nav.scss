@@ -49,6 +49,8 @@
 				white-space: nowrap;
 				//border: 1px solid #eee;
 				//border-top-color: transparent;
+				border: 1px solid #eee;
+				border-top: none;
 				border-bottom: 2px solid $base-color;
 				.stuck &{
 					background-color: #eee;
