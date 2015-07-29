@@ -666,7 +666,7 @@ GALLERY PAGE
 }
 .grid-sizer, .image-gallery-item{
 	width: 100%;
-	@include respond-to(300){
+	@include respond-to(320){
 		@include span(6 of 12 0);
 	}
 	@include respond-to(700){

@@ -1328,8 +1328,10 @@ GALLERY PAGE
   font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 1.44em;
   white-space: nowrap;
-  line-height: 1;
-  padding: 0.5em 1.3em; }
+  line-height: 1; }
+  @media  (min-width: 460px) {
+    .image-gallery-summary-item-title {
+      padding: 0.5em 1.3em; } }
   @media  (min-width: 800px) {
     .image-gallery-summary-item-title {
       font-size: 1.728em; } }
@@ -1365,9 +1367,11 @@ GALLERY PAGE
       box-shadow: 0 0 0 3px #1fb25a, 0 4px 7px 2px rgba(0, 0, 0, 0.2); }
 
 .grid-sizer, .image-gallery-item {
-  width: 100%;
-  width: 50%;
-  float: left; }
+  width: 100%; }
+  @media  (min-width: 320px) {
+    .grid-sizer, .image-gallery-item {
+      width: 50%;
+      float: left; } }
   @media  (min-width: 700px) {
     .grid-sizer, .image-gallery-item {
       width: 33.33333%;
@@ -2320,6 +2324,285 @@ img.zoom-img {
     .stud-wrap .horse__image {
       width: 400px;
       float: left; } }
+
+/*///////////////////////////////////////////
+PRODUCT LISTING
+///////////////////////////////////////////*/
+.basket-wrap {
+  width: 100%;
+  border-top: 3px solid #1fb25a;
+  border-bottom: 1px solid #ddd;
+  background: #1fb25a; }
+  .basket-wrap:before, .basket-wrap:after {
+    content: "";
+    display: table; }
+  .basket-wrap:after {
+    clear: both; }
+  @media  (min-width: 550px) {
+    .basket-wrap {
+      background: #fff; } }
+
+.inner-basket {
+  padding: 1em 2em;
+  width: 100%;
+  text-align: center; }
+  .inner-basket:before, .inner-basket:after {
+    content: "";
+    display: table; }
+  .inner-basket:after {
+    clear: both; }
+  @media  (min-width: 550px) {
+    .inner-basket {
+      width: 100%;
+      padding: 1em 2em;
+      text-align: right;
+      background: #1fb25a; } }
+
+.basket-icon {
+  width: 1.5em;
+  height: 1.5em;
+  fill: #fff;
+  margin-right: 0.5em; }
+  @media  (min-width: 550px) {
+    .basket-icon {
+      display: inline-block; } }
+
+#editirMiniBasket {
+  color: #fff;
+  font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif; }
+  @media  (min-width: 550px) {
+    #editirMiniBasket {
+      display: inline-block;
+      font-family: texgyreadventorregular, Arial, "Helvetica Neue", Helvetica, sans-serif;
+      top: -4px;
+      position: relative; } }
+  #editirMiniBasket a {
+    color: #fff; }
+    #editirMiniBasket a:hover {
+      text-decoration: underline; }
+
+.shop-wrap, .product-wrap, .checkout-wrap {
+  width: 100%;
+  max-width: 74em;
+  margin: auto;
+  padding-bottom: 2em;
+  font-size: 15px; }
+  .shop-wrap:before, .shop-wrap:after, .product-wrap:before, .product-wrap:after, .checkout-wrap:before, .checkout-wrap:after {
+    content: "";
+    display: table; }
+  .shop-wrap:after, .product-wrap:after, .checkout-wrap:after {
+    clear: both; }
+  @media  (min-width: 768px) {
+    .shop-wrap, .product-wrap, .checkout-wrap {
+      font-size: 16px; } }
+
+.product_item {
+  text-align: center;
+  padding: 2.2082%;
+  margin-bottom: 1.3em; }
+  @media  (min-width: 480px) {
+    .product_item {
+      margin: 0;
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+      padding-left: 1.38889%;
+      padding-right: 1.38889%; } }
+  @media  (min-width: 768px) {
+    .product_item {
+      box-sizing: border-box;
+      width: 33.33333%;
+      float: left;
+      padding-left: 1.38889%;
+      padding-right: 1.38889%; } }
+  @media  (min-width: 1200px) {
+    .product_item {
+      box-sizing: border-box;
+      width: 25%;
+      float: left;
+      padding-left: 1.38889%;
+      padding-right: 1.38889%; } }
+  .product_item:hover {
+    background-color: #eee; }
+
+.product_img {
+  margin-bottom: 1em;
+  line-height: 0; }
+
+.productCat, .productId, .productDesc, .product_view_btn {
+  display: none; }
+
+.productName a {
+  color: #666; }
+
+.productPrice {
+  font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #1fb25a;
+  font-size: 1.728em; }
+
+/*///////////////////////////////////////////
+PRODUCT PAGE
+///////////////////////////////////////////*/
+.product-image {
+  text-align: center;
+  margin-bottom: 1em; }
+  @media  (min-width: 920px) {
+    .product-image {
+      margin-bottom: 0;
+      width: 47.82609%;
+      float: left;
+      margin-right: 4.34783%; } }
+  @media  (min-width: 1080px) {
+    .product-image {
+      width: 57.14286%;
+      float: left;
+      margin-right: 2.85714%; } }
+
+#carousel {
+  display: none; }
+
+.product-details {
+  margin: auto;
+  text-align: center;
+  max-width: 34em; }
+  @media  (min-width: 920px) {
+    .product-details {
+      margin: 0;
+      text-align: left;
+      max-width: none;
+      width: 47.82609%;
+      float: right;
+      margin-right: 0; } }
+  @media  (min-width: 1080px) {
+    .product-details {
+      width: 40%;
+      float: right;
+      margin-right: 0; } }
+
+.product-head {
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  border-bottom: 1px solid #ddd; }
+
+.product-name {
+  font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.728em;
+  text-transform: uppercase;
+  color: #1fb25a;
+  line-height: 1.1;
+  margin-bottom: 10px; }
+  @media  (min-width: 480px) {
+    .product-name {
+      font-size: 2.0736em; } }
+
+.product-price {
+  font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.44em; }
+  @media  (min-width: 480px) {
+    .product-price {
+      font-size: 1.728em; } }
+
+.product-bottom {
+  padding-top: 1.5em;
+  margin-top: 1.5em;
+  border-top: 1px solid #ddd; }
+
+.ecommerceProductOptionsInnerTitle {
+  display: none; }
+
+.detailProductQuantityWrap {
+  display: none; }
+
+.productOptionsLabel {
+  font-size: 1.2em;
+  font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-align: left; }
+
+.productPostage select {
+  width: 100%;
+  padding: 0.95em 0.5em;
+  outline: none;
+  font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  border: 3px solid #ece8e2; }
+  .productPostage select:focus {
+    border-color: #050505; }
+.productPostage option {
+  padding: 0.3em 0; }
+
+.detailProductBtn {
+  margin-top: 1.5em; }
+  .detailProductBtn a {
+    display: block;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #555;
+    font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.2em; }
+  .detailProductBtn:hover a {
+    background-color: #1fb25a; }
+
+.productHide {
+  display: none; }
+
+.buyMsg {
+  font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #1fb25a; }
+
+#checkoutMessage {
+  padding: 2em;
+  font-size: 14px; }
+  #checkoutMessage a {
+    display: block;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #555;
+    font-family: texgyreadventorbold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin: 1.2em 0;
+    width: 100%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    line-height: 1;
+    white-space: nowrap;
+    -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out; }
+    #checkoutMessage a:hover {
+      background-color: #1fb25a; }
+    @media  (min-width: 800px) {
+      #checkoutMessage a {
+        display: inline-block;
+        width: 45%;
+        margin: 0.5em 2%;
+        font-size: 1.2em; } }
+  @media  (min-width: 800px) {
+    #checkoutMessage {
+      font-size: 16px; } }
+
+/*///////////////////////////////////////////
+CHECKOUT PAGE
+///////////////////////////////////////////*/
+table.basketOutput {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse; }
+  table.basketOutput td {
+    padding: 0.5em;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+  table.basketOutput tr td:nth-child(n+1) {
+    text-align: center; }
+
+.basketHead th {
+  border-bottom: 3px solid #ccc;
+  border-top: 0;
+  padding: 0.5em;
+  font-family: Lato-Bold, Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: uppercase;
+  color: #666;
+  text-align: center; }
 
 /* -----------------------------------------
 	13.0. Footer
