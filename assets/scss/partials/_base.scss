@@ -126,3 +126,13 @@
 			margin-bottom: 0.5em;
 		}
 	}
+
+	.disc{
+		display: inline-block;
+		margin-left: 1.2em;
+		li{
+			list-style-type: disc;
+			margin: 0.5em 0;
+			text-align: left;
+		}
+	}

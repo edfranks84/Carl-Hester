@@ -43,7 +43,7 @@
 		background-image: url("/carlhester-com/_img/images/resultsTop.jpg");
 		background-position: center top;
 	}
-	#s395860 &{
+	#s395860 &, #s442233 &{
 		background-image: url("/carlhester-com/_img/images/linksTop4.jpg");
 		background-position: center bottom;
 	}
@@ -63,7 +63,7 @@
 	}
 	@include respond-to(920){
 		height: 65vh;
-		#s395855 &, #s395863 &, #s395856 &, #s395854 &, #s395858 &{
+		#s395855 &, #s395863 &, #s395856 &, #s395854 &, #s395858 &, #s395864 &{
 			height: 80vh;
 		}
 		#s395861 &{
@@ -91,21 +91,28 @@
 		text-align: center;
 		font-size: 10px;
 		@include respond-to(480){
-			font-size: 14px;
+			font-size: 12px;
 		}
 		@include respond-to(640){
 			width: 75%;
 		}
 		@include respond-to(800){
-			bottom: 10%;
-			top: auto;
-			left: 3em;
+			//bottom: 10%;
+			//top: auto;
+			top: 40%;
+			left: 2em;
 			transform: none;
+			transform: translateY(-50%);
 			background-color: rgba($base-color, 0.9);
 			width: auto;
-			#s395853 &, #s395855 &, #s395865 &{
-				right: 3em;
+			#s395853 &, #s395855 &, #s395865 , #s395858 &{
+				right: 2em;
 				left: auto;	
+			}
+			#s395855 &, #s395856 &, #s395858 &, #s395861 &{
+				bottom: 5%;
+				top: auto;
+				transform: none;
 			}	
 		}
 		@include respond-to(1000){
@@ -137,7 +144,10 @@
 
 	&__content{
 		@include container;
-		max-width: 60em;
+		max-width: 50em;
+		@include respond-to(1025){
+			max-width: 60em;
+		}
 	}
 	h3,h4,h5{
 		border-bottom: 1px solid currentColor;
@@ -452,6 +462,7 @@ RESULTS PAGE
 	@include clearfix;
 	@include respond-to(700){
 		font-size: 16px;
+		margin-bottom: 1.5em;
 	}
 }
 .horseTrainingItemHeader{
@@ -582,6 +593,12 @@ RESULTS PAGE
 GALLERY PAGE
 *******************************************************
 ******************************************************/
+
+#s438064{
+	.main__content{
+		max-width: 75em;
+	}
+}
 
 .image-gallery-summary{
 	@include clearfix;
