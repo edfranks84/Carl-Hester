@@ -1,5 +1,5 @@
 .inner-hero{
-	height: 600px;
+	height: 200px;
 	height: 40vh;
 	width: 100%;
 	overflow: hidden;
@@ -43,7 +43,7 @@
 		background-image: url("/carlhester-com/_img/images/resultsTop.jpg");
 		background-position: center top;
 	}
-	#s395860 &, #s442233 &{
+	#s395860 &, #s442233 &, #s445502 &{
 		background-image: url("/carlhester-com/_img/images/linksTop4.jpg");
 		background-position: center bottom;
 	}
@@ -63,8 +63,11 @@
 	}
 	@include respond-to(920){
 		height: 65vh;
-		#s395855 &, #s395863 &, #s395856 &, #s395854 &, #s395858 &, #s395864 &{
+		#s395855 &, #s395863 &, #s395856 &, #s395854 &, #s395864 &{
 			height: 80vh;
+		}
+		#s395858 &{
+			height: 85vh;
 		}
 		#s395861 &{
 			height: 95vh;
@@ -89,7 +92,7 @@
 		background-color: rgba($base-color, 0.8);
 		width: 90%;
 		text-align: center;
-		font-size: 10px;
+		font-size: 8px;
 		@include respond-to(480){
 			font-size: 12px;
 		}
@@ -99,13 +102,13 @@
 		@include respond-to(800){
 			//bottom: 10%;
 			//top: auto;
-			top: 40%;
+			top: 50%;
 			left: 2em;
 			transform: none;
 			transform: translateY(-50%);
 			background-color: rgba($base-color, 0.9);
 			width: auto;
-			#s395853 &, #s395855 &, #s395865 , #s395858 &{
+			#s395853 &, #s395855 &, #s395865 , #s395858 &, #s395865 &{
 				right: 2em;
 				left: auto;	
 			}
@@ -113,6 +116,9 @@
 				bottom: 5%;
 				top: auto;
 				transform: none;
+			}
+			#s395854 &{
+				top: 40%;
 			}	
 		}
 		@include respond-to(1000){

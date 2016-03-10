@@ -55,7 +55,7 @@ PRODUCT LISTING
 		}
 	}
 }
-.shop-wrap,.product-wrap, .checkout-wrap{
+.shop-wrap,.product-wrap, .checkout-wrap,.shopInfo{
 	width: 100%;
 	max-width: 74em;
 	margin: auto;
@@ -108,6 +108,17 @@ PRODUCT LISTING
 	font-family: $heading-font-bold;
 	color: $base-color;
 	font-size: ms(3);
+}
+
+.shopInfo{
+	padding: 2em;
+	border: 1px solid #999;
+	border-top: 3px solid $base-color;
+	background-color: #f1f1f1;
+	margin-bottom: 2em;
+	b{
+		font-family: $base-font-bold;
+	}
 }
 
 /*///////////////////////////////////////////
